@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public abstract class BasePage {
 
-    WebDriver driver;
+    public WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
@@ -59,6 +59,14 @@ public abstract class BasePage {
             }
         } catch (Exception ex) {
             System.out.println(linkUrl + " - " + ex.getMessage() + " is a broken link");
+        }
+    }
+
+    public void pause(int millis) {
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 

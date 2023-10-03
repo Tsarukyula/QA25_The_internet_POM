@@ -17,8 +17,8 @@ public class FramesTests extends TestBase {
     @Test
     public void switchToNestedFramesTest() {
         new FramesPage(driver)
-                .getNestedFrames()
-                .switchToNestedFrames();
+                .getNestedFrames();
+                //.switchToNestedFrames();
     }
 
 

@@ -18,4 +18,5 @@ public class HorizontalSliderTests extends TestBase {
         new HorizontalSliderPage(driver).moveSliderInHorizontalDirection()
                 .assertSliderValue("5");
     }
+
 }

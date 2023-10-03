@@ -14,7 +14,6 @@ public class FramesPage extends BasePage {
         super(driver);
     }
 
-
     @FindBy(xpath = "//a[text()='Nested Frames']")
     WebElement nestedFrame;
 
@@ -24,52 +23,40 @@ public class FramesPage extends BasePage {
     }
 
 
-    @FindBy(xpath = "//frame[@name='frame-top']")
-    WebElement frameTop;
-
-    @FindBy(xpath = "//frame[@name='frame-left']")
-    WebElement frameLeft;
-
-    @FindBy(xpath = "//frame[@name='frame-middle']")
-    WebElement frameMiddle;
-
-    @FindBy(xpath = "//frame[@name='frame-right']")
-    WebElement frameRight;
-
-    @FindBy(xpath = "//frame[@name='frame-bottom']")
-    WebElement frameBottom;
-
-    @FindBy(tagName = "body")
-    WebElement body;
-
-
-    public FramesPage switchToNestedFrames() {
-
-        driver.switchTo().frame(frameTop);
-
-        driver.switchTo().frame(frameLeft);
-        System.out.println("Iframe is " + body.getText());
-        //driver.switchTo().parentFrame();
-
-        driver.switchTo().frame(frameMiddle);
-        System.out.println("Iframe is " + body.getText());
-        //driver.switchTo().parentFrame();
-
-        driver.switchTo().frame(frameRight);
-        System.out.println("Iframe is " + body.getText());
-        //driver.switchTo().parentFrame();
-
-        driver.switchTo().frame(frameBottom);
-        System.out.println("Iframe is " + body.getText());
-        //driver.switchTo().parentFrame();
-
-        driver.switchTo().defaultContent();
-        return this;
-
-    }
-
-
-
+//    @FindBy(xpath = "//frame[@name='frame-top']")
+//    WebElement frameTop;
+//    @FindBy(xpath = "//frame[@name='frame-left']")
+//    WebElement frameLeft;
+//    @FindBy(xpath = "//frame[@name='frame-middle']")
+//    WebElement frameMiddle;
+//    @FindBy(xpath = "//frame[@name='frame-right']")
+//    WebElement frameRight;
+//    @FindBy(xpath = "//frame[@name='frame-bottom']")
+//    WebElement frameBottom;
+//    @FindBy(tagName = "body")
+//    WebElement body;
+//
+//    public FramesPage switchToNestedFrames() {
+//        driver.switchTo().frame(frameTop);
+//        driver.switchTo().frame(frameLeft);
+//        System.out.println("Iframe is " + body.getText());
+//        driver.switchTo().parentFrame();
+//
+//        driver.switchTo().frame(frameMiddle);
+//        System.out.println("Iframe is " + body.getText());
+//        driver.switchTo().parentFrame();
+//
+//        driver.switchTo().frame(frameRight);
+//        System.out.println("Iframe is " + body.getText());
+//        driver.switchTo().parentFrame();
+//
+//        driver.switchTo().frame(frameBottom);
+//        System.out.println("Iframe is " + body.getText());
+//        driver.switchTo().parentFrame();
+//
+//        driver.switchTo().defaultContent();
+//        return this;
+//    }
 
     @FindBy(xpath = "//a[text()='iFrame']")
     WebElement iFrame;

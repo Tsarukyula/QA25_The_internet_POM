@@ -1,6 +1,9 @@
 package org.ait.theinternet.pages;
 
 import org.ait.theinternet.pages.frames.FramesPage;
+import org.ait.theinternet.pages.homework051023.CheckBoxesPage;
+import org.ait.theinternet.pages.homework051023.DropdownPage;
+import org.ait.theinternet.pages.homework051023.FileUploadPage;
 import org.ait.theinternet.pages.horiyontalSlider.HorizontalSliderPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -60,5 +63,31 @@ public class HomePage extends BasePage{
     public HorizontalSliderPage getHorizontalSlider() {
         click(horizontalSlider);
         return new HorizontalSliderPage(driver);
+    }
+
+
+    @FindBy(xpath = "//a[text()='Checkboxes']")
+    WebElement checkboxes;
+    public CheckBoxesPage getCheckBoxes() {
+        click(checkboxes);
+        return new CheckBoxesPage(driver);
+    }
+
+
+    @FindBy(xpath = "//a[text()='File Upload']")
+    WebElement fileUpload;
+
+    public FileUploadPage getFileUpload() {
+        click(fileUpload);
+        return new FileUploadPage(driver);
+    }
+
+
+    @FindBy(xpath = "//a[text()='Dropdown']")
+    WebElement dropdown;
+
+    public DropdownPage getDropdown() {
+        click(dropdown);
+        return new DropdownPage(driver);
     }
 }

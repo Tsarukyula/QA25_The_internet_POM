@@ -11,18 +11,16 @@ public class FileUploadTests extends TestBase {
 
     @BeforeMethod
     public void precondition() {
+
         new HomePage(driver).getFileUpload();
     }
 
     @Test
     public void FileUploadTest() {
         String filePath = "C:/Users/AIT TR Student/Desktop/1.jpg";
-        new FileUploadPage(driver).uploadFile(filePath);
+
+        new FileUploadPage(driver).uploadFile(filePath)
+                .assertUploadedFile("1.jpg");
     }
 
-    @Test
-    public void FileUploadWithoutButtonTest() {
-        String filePath = "C:/Users/AIT TR Student/Desktop/1.jpg";
-        new FileUploadPage(driver).uploadFileWithoutButton(filePath);
-    }
 }
